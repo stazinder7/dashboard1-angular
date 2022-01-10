@@ -1,0 +1,11 @@
+<!-- <app-header></app-header> -->
+<section class="main_section" [ngClass]="{sidenav_collapsed:json.sidetoggle}">
+ <div id="appheader"></div>
+  <app-sidebar></app-sidebar>
+  <main>
+    <!-- <app-dashboard></app-dashboard>
+    <app-dropdown></app-dropdown> -->
+    <router-outlet></router-outlet>
+  </main>
+</section>
+<app-setting></app-setting>

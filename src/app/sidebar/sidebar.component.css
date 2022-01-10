@@ -1,0 +1,119 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    color: #282f53;
+    z-index: 99;
+    background-color: var(--white-color);
+    box-shadow: 0 8px 24px var(--box-shadow-color);
+    -webkit-transition: left 450ms ease, width 450ms ease;
+    -o-transition: left 450ms ease, width 450ms ease;
+    border-right: 1px solid var(--border-color);
+    width: 270px;
+  
+ 
+}
+
+.sidebar_header {
+    
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    /* border-right: 1px solid #e9edf4; */
+    padding: 19px 17px;
+    align-items: center;
+    
+    transition: left 0.3s ease, width 450ms ease;
+    height: 75px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    /* position: fixed; */
+    z-index: 99;
+    background-color: var(--white-color);
+}
+.sidebar_header .header-brand {
+    text-align: center;
+    margin: 0 auto !important;
+}
+.main_sidemenu {
+    float: left;
+    width: 100%;
+}
+ul.sidemenu {
+    float: left;
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 0 0px;
+}
+ul.sidemenu li {
+    float: left;
+    width: 100%;
+    list-style: none;
+}
+ul.sidemenu li a {
+    padding: 15px 30px;
+    float: left;
+    text-decoration: none;
+    color: var(--text-color);
+    width: 100%;
+    font-size: 15px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+ul.sidemenu li a:hover ,
+ul.sidemenu li a:focus,
+ul.sidemenu li.active a,
+ul.sidemenu li a:hover .menu_icon,
+ul.sidemenu li a:focus .menu_icon,
+ul.sidemenu li.active a .menu_icon{
+    color: var(--primary-bg-color);
+}
+.menu_icon {
+    color: var(--primary-bg-color);
+    font-size: 22px;
+  
+    position: relative;
+}
+.sidenav_collapsed .sidebar {
+    left: 0;
+    width: 80px;
+    overflow: hidden;
+}
+
+.sidenav_collapsed .sidebar .menu_item span {
+    display: none !important;
+}
+
+.sidenav_collapsed .sidebar .header-brand-img.light-logo1,
+.sidebar .header-brand-img.light-logo {
+    display: none !important;
+}
+.sidenav_collapsed .sidebar .header-brand-img.light-logo,
+.sidebar .header-brand-img.light-logo1 {
+    display: block !important;
+}
+.header-brand-img {
+    height: 40px;
+}
+
+body.rtl .sidebar{right: 0; left: auto;}
+ul.side_submenu {
+    background: rgba(0, 0, 0, 0.05);
+    width: 100%;
+    padding-left: 30px;
+    float: left;
+    display: none;
+}
+li.menu_item.dropdown.open span.dropdown_icon {
+    transform: rotate(180deg);
+}
+span.dropdown_icon {
+    position: absolute;
+    right: 30px;
+    transition: 0.5s ease-in-out;
+}

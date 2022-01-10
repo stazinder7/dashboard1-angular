@@ -1,0 +1,18 @@
+<div class="setting_feature" [ngClass]="{open: feature_opened}">
+    <div class="setting_feature_icon" (click)="feature_open()"><i class="las la-cog"></i></div>
+    <ul class="setting_feature_list">
+        <li *ngFor="let setting_feature_item of setting_feature"><a href="javascript:void(0)"
+                (click)='feature(setting_feature_item)'><i
+                    class="{{setting_feature_item.icon}}"></i>{{setting_feature_item.text}}</a></li>
+
+        <li><span>Theme color
+                <input type="color" name="color" id="color" (change)="getColor($event)"/>
+            </span>
+        </li>
+        <li>
+            <span>Sidebar Background
+                <input type="color" name="color" id="bgcolor">
+            </span>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,29 @@
+<div class="sidebar">
+    <div class="sidebar_header">
+        <a class="header-brand active" href="index.html">
+            <img src="https://spruko.com/demo/sash/sash/assets/images/brand/logo-3.png"
+                class="header-brand-img light-logo1" alt="logo">
+            <img src="https://spruko.com/demo/sash/sash/assets/images/brand/logo-2.png"
+                class="header-brand-img light-logo" alt="logo">
+        </a>
+    </div>
+    <div class="main_sidemenu">
+        <ul class="sidemenu">
+            <li class="menu_item" *ngFor="let sidemenu_item of sidemenu"
+                [ngClass]="{'dropdown' : sidemenu_item.submenu }" (click)="dropdownshow($event)">
+                <a [routerLink]="sidemenu_item.link">
+                    <i class="menu_icon {{sidemenu_item.icon}}"></i>
+                    <span>{{sidemenu_item.text}}</span>
+                    <span class="dropdown_icon"  *ngIf="sidemenu_item.submenu"><i class="las la-angle-down"></i></span>
+                </a>
+                <ul class="side_submenu " *ngIf="sidemenu_item.submenu" (click)="$event.stopPropagation()">
+                    <li class="menu_item" *ngFor="let subitems of sidemenu_item.submenu">
+                        <a [routerLink]="subitems.link">
+                            <span>{{subitems.name}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

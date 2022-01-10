@@ -1,0 +1,15 @@
+.circle-icon {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.prime-card img {
+    height: 215px;
+    
+}

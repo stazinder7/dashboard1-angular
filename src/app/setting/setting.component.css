@@ -1,0 +1,80 @@
+.setting_feature_list > li > a ,
+.setting_feature_list > li > span {
+    float: left;
+    width: 100%;
+    font-size: 15px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.setting_feature_list > li > a > i{margin-right: 10px;}
+.setting_feature_list > li > a:hover,
+.setting_feature_list > li > a:focus,
+.setting_feature_list > li > a.active{
+    color: var(--primary-bg-color)
+}
+ul.setting_feature_list > li {
+    float: left;
+    width: 100%;
+    list-style: none;
+    border-bottom: 1px dashed var(--border-color);
+}
+ul.setting_feature_list > li:last-child{border-bottom: 0;}
+ul.setting_feature_list {
+    background: var(--white-color);
+    border: 1px solid var(--border-color);
+    width: 200px;
+    float: left;
+    box-shadow: -2px 2px 20px 10px var(--box-shadow-color);
+    border-bottom-left-radius: 5px;
+
+}
+.setting_feature{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translate(200px , -50%);
+    z-index: 9;
+    display: flex;
+    transition:transform 0.5s ease-in-out;
+
+}
+body.rtl .setting_feature{  transform: translate(-200px , -50%);}
+body.rtl .setting_feature.open,
+.setting_feature.open{ transform: translate(0px , -50%);}
+.setting_feature_icon {
+    width: 50px;
+    display: inline-block;
+    height: 50px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white-color);
+    border-right: 0;
+    right: -1px;
+    position: relative;
+    border-radius:5px 0px 0px 5px;
+    cursor: pointer;
+    box-shadow: -10px 8px 10px 0px rgb(0 0 0 / 10%);
+
+
+}
+body.rtl .setting_feature_icon{right: auto; left: -1px; border-left: 0;   border-radius: 0px 5px 5px 0;  box-shadow: 10px 8px 10px 0px var(--box-shadow-color);}
+.setting_feature_list > li > span {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.setting_feature_icon i {
+    font-size: 26px;
+    animation:rotate 2s linear infinite ;
+    color: var(--text-color);
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+body.rtl .setting_feature{left: 0;right: auto;}

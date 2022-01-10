@@ -1,0 +1,63 @@
+<div class="breadcrumb-header justify-content-between">
+    <div class="left-content"> <h2 class="main-content-title font-weight-800">Dropdown</h2> </div>
+</div>
+<div class="row">
+    <div class="xl-4 column ">
+        <div class="card">
+            <div class="card_body">
+                <h4 class="mb-4 font-weight-600 text-color">Dropdown
+                    <div class="custom_checkbox ">
+                        <input type="checkbox" name="searchenable" id="searchenable"
+                            (change)="changecheckbox($event)" />
+                        <label for="searchenable" class="font-weight-400">Enable Search</label>
+                    </div>
+                </h4>
+
+                <div class="custom_dropdown" (click)="dropdownShow()" [ngClass]="{'open':dropShow}">
+                    <input type="search" placeholder="Dropdown item" readonly="readonly" class="custom_input"
+                        id="searchfield" [value]="selectedValue" />
+                    <ul class="select_dropdown">
+                        <li *ngFor="let items of dropdown " class="option" (click)="show(items)">
+                            {{items}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="xl-4 column">
+        <div class="card">
+            <div class="card_body">
+                <h4 class="mb-4 font-weight-600 text-color">Dropdown with Icon</h4>
+                <div class="custom_dropdown" (click)="dropdownShow1()" [ngClass]="{'open':dropShow1}">
+                    <input type="search" placeholder="Dropdown item" readonly="readonly" class="custom_input"
+                        id="searchfield" [value]="selectedValue1" />
+                    <ul class="select_dropdown">
+                        <li *ngFor="let items of dropdown1 " class="option" (click)="show1(items.text)">
+                            <i class="{{items.icon}}"></i>
+                            {{items.text}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="xl-4 column">
+        <div class="card">
+            <div class="card_body">
+                <h4 class="mb-4 font-weight-600 text-color">Dropdown with Image</h4>
+                <div class="custom_dropdown" (click)="dropdownShow2()" [ngClass]="{'open':dropShow2}">
+                    <input type="search" placeholder="Dropdown item" readonly="readonly" class="custom_input"
+                        id="searchfield" [value]="selectedValue2" />
+                    <ul class="select_dropdown">
+                        <li *ngFor="let items of dropdown2 " class="option" (click)="show2(items.text)">
+                            <img src="{{items.path}}" alt="" srcset="">
+                            {{items.text}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>

@@ -1,0 +1,367 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul li,
+ol li {
+  list-style: none;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+@media (min-width: 1200px) {
+  .xl-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .xl-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.66666667%;
+    flex: 0 0 91.66666667%;
+    max-width: 91.66666667%;
+  }
+  .xl-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.33333%;
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+  .xl-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .xl-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66666667%;
+    flex: 0 0 66.66666667%;
+    max-width: 66.66666667%;
+  }
+  .xl-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.33333%;
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+  .xl-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .xl-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66667%;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+  .xl-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .xl-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .xl-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66666667%;
+    flex: 0 0 16.66666667%;
+    max-width: 16.66666667%;
+  }
+  .xl-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33333333%;
+    flex: 0 0 8.33333333%;
+    max-width: 8.33333333%;
+  }
+}
+
+.column {
+  position: relative;
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-weight-100 {
+  font-weight: 100;
+}
+
+.font-weight-200 {
+  font-weight: 200;
+}
+
+.font-weight-300 {
+  font-weight: 300;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.font-weight-800 {
+  font-weight: 800;
+}
+
+.font-weight-900 {
+  font-weight: 900;
+}
+
+.mb-1 {
+  margin-bottom: 0.2rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.4rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.6rem;
+}
+
+.mb-4 {
+  margin-bottom: 0.8rem;
+}
+
+.mt-1 {
+  margin-top: 0.2rem;
+}
+
+.mt-2 {
+  margin-top: 0.4rem;
+}
+
+.mt-3 {
+  margin-top: 0.6rem;
+}
+
+.mt-4 {
+  margin-top: 0.8rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.2rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.4rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.6rem;
+}
+
+.pb-4 {
+  padding-bottom: 0.8rem;
+}
+
+.pt-1 {
+  padding-top: 0.2rem;
+}
+
+.pt-2 {
+  padding-top: 0.4rem;
+}
+
+.pt-3 {
+  padding-top: 0.6rem;
+}
+
+.pt-4 {
+  padding-top: 0.8rem;
+}
+
+.text-primary {
+  color: var(--primary-bg-color);
+}
+
+.bg-primary-transparent {
+  background: var(--primary-bg-color);
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.5rem 0.78rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 5px;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.btn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn.disabled {
+  opacity: 0.65;
+}
+
+a.btn.disabled {
+  pointer-events: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--primary-bg-color);
+  border-color: var(--primary-bg-color);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: var(--primary-bg-color);
+  border-color: var(--primary-bg-color);
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  -webkit-box-shadow: 0 0 0 0.15rem rgba(119, 210, 191, 0.5);
+  box-shadow: 0 0 0 0.15rem rgba(119, 210, 191, 0.5);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: var(--primary-bg-color);
+  border-color: var(--primary-bg-color);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active {
+  color: #fff;
+  background-color: var(--primary-bg-color);
+  border-color: var(--primary-bg-color);
+}
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background: var(--white-color);
+  background-clip: border-box;
+  border-radius: 5px;
+  border: 0px solid transparent;
+  margin-bottom: 1.3rem;
+  -webkit-box-shadow: 1px 1px 7px var(--box-shadow-color);
+  box-shadow: 1px 1px 7px var(--box-shadow-color);
+}
+
+.card_body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+/*# sourceMappingURL=main.css.map */

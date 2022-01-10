@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+ul li,
+ol li {
+    list-style: none;
+}
+a {
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    &::-webkit-color-swatch-wrapper {
+        padding: 0;
+    }
+    &::-webkit-color-swatch {
+        border: none;
+    }
+}
