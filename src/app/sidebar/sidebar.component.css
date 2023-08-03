@@ -11,12 +11,9 @@
     -o-transition: left 450ms ease, width 450ms ease;
     border-right: 1px solid var(--border-color);
     width: 270px;
-  
- 
 }
 
 .sidebar_header {
-    
     display: flex;
     border-bottom: 1px solid var(--border-color);
     /* border-right: 1px solid #e9edf4; */
@@ -58,7 +55,7 @@ ul.sidemenu li a {
     text-decoration: none;
     color: var(--text-color);
     width: 100%;
-    font-size: 15px;
+    font-size: 14px;
     white-space: nowrap;
     display: flex;
     align-items: center;
@@ -114,6 +111,6 @@ li.menu_item.dropdown.open span.dropdown_icon {
 }
 span.dropdown_icon {
     position: absolute;
-    right: 30px;
+    inset-inline-end: 30px;
     transition: 0.5s ease-in-out;
 }

@@ -1,5 +1,8 @@
 body{
     font-family: $font-poppin;
+    color: var(--text-color);
+    font-size: 4  + $fs-value;
+
 }
 .font-weight-100{font-weight: 1 * $fw-100;}
 .font-weight-200{font-weight: 2 * $fw-100;}
@@ -11,6 +14,7 @@ body{
 .font-weight-800{font-weight: 8 * $fw-100;}
 .font-weight-900{font-weight: 9 * $fw-100;}
 
+.mb-0 {margin-bottom: 0 * $default ;}
 .mb-1 {margin-bottom: 1 * $default ;}
 .mb-2 {margin-bottom: 2 * $default;}
 .mb-3 {margin-bottom: 3 * $default;}
@@ -40,7 +44,7 @@ body{
 .text-color{
     color: var(--text-color);
 }
-
+.fs-11{font-size: 1 + $fs-value;}
 .fs-12{font-size: 2 + $fs-value;}
 .fs-14{font-size: 4 + $fs-value;}
 .fs-16{font-size: 6 + $fs-value;}
@@ -48,3 +52,17 @@ body{
 .fs-20{font-size: 10 + $fs-value;}
 
 .text-center{text-align: center;}
+
+code {
+    background: #f6f6fb;
+    border: 1px solid #e9edf4;
+    border-radius: 3px;
+    padding: 0px 3px;
+    color: #fc5296;
+}
+
+.ellipse {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

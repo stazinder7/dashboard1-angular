@@ -16,12 +16,12 @@ export class SidebarComponent implements OnInit {
   }
   sidemenu = [
     { icon: 'las la-home', text: 'Dashboard', link: '/dashboard' },
-    { icon: 'lab la-app-store', text: 'Apps' },
+    { icon: 'lab la-app-store', text: 'Apps', link:'/apps' },
     { icon: 'las la-layer-group', text: 'Authentication', submenu: [{ name: 'Login', link: '/login' }, { name: 'Sign Up', link: '/signup' }] },
     { icon: 'las la-shopping-cart', text: 'Pages', link: '/pages' },
     { icon: 'las la-envelope', text: 'Components ', submenu: [{ name: 'Alerts', link: '/alerts' }, { name: 'Buttons', link: '/buttons' }, { name: 'Cards', link: '/cards' }, { name: 'Dropdown', link: '/dropdown' }] },
     { icon: 'las la-envelope', text: 'Forms', link: '/forms' },
-    { icon: 'las la-envelope', text: 'Tables', link: '/tables' },
+    { icon: 'las la-envelope', text: 'Tables', link: '/table' },
 
   ]
   dropdownshow(ev: any) {

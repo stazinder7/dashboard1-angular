@@ -1,24 +1,30 @@
 <div class="breadcrumb-header justify-content-between">
-    <div class="left-content"> <h2 class="main-content-title font-weight-800">Dropdown</h2> </div>
+    <div class="left-content">
+        <h2 class="main-content-title font-weight-800">Dropdown</h2>
+    </div>
 </div>
 <div class="row">
-    <div class="xl-4 column ">
+    <div class="xl-4 column">
         <div class="card">
             <div class="card_body">
-                <h4 class="mb-4 font-weight-600 text-color">Dropdown
-                    <div class="custom_checkbox ">
+                <h4 class="mb-4 font-weight-600 text-color">
+                    Font Dropdown
+                    <div class="custom_checkbox">
                         <input type="checkbox" name="searchenable" id="searchenable"
                             (change)="changecheckbox($event)" />
                         <label for="searchenable" class="font-weight-400">Enable Search</label>
                     </div>
                 </h4>
-
-                <div class="custom_dropdown" (click)="dropdownShow()" [ngClass]="{'open':dropShow}">
+                <div class="custom_dropdown" (click)="dropdownShow()" [ngClass]="{ open: dropShow }">
                     <input type="search" placeholder="Dropdown item" readonly="readonly" class="custom_input"
-                        id="searchfield" [value]="selectedValue" />
+                        id="searchfield" [value]="selectedValue" [(ngModel)]="filtertext" (input)="dropShow = true"
+                        autocomplete="off" />
                     <ul class="select_dropdown">
-                        <li *ngFor="let items of dropdown " class="option" (click)="show(items)">
-                            {{items}}</li>
+                        <li *ngFor="let items of font_dropdown | filter: filtertext" class="option fs-18"
+                        [style.font-family]="items"
+                             (click)="show(items)">
+                            {{ items }}
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -28,13 +34,14 @@
         <div class="card">
             <div class="card_body">
                 <h4 class="mb-4 font-weight-600 text-color">Dropdown with Icon</h4>
-                <div class="custom_dropdown" (click)="dropdownShow1()" [ngClass]="{'open':dropShow1}">
+                <div class="custom_dropdown" (click)="dropdownShow1()" [ngClass]="{ open: dropShow1 }">
                     <input type="search" placeholder="Dropdown item" readonly="readonly" class="custom_input"
                         id="searchfield" [value]="selectedValue1" />
-                    <ul class="select_dropdown">
-                        <li *ngFor="let items of dropdown1 " class="option" (click)="show1(items.text)">
-                            <i class="{{items.icon}}"></i>
-                            {{items.text}}
+                    <ul class="select_dropdown" id="list">
+                        <li *ngFor="let items of dropdown1; let first = first" [class.selected]="first" class="option"
+                            (click)="show1(items.text)">
+                            <i class="{{ items.icon }}" tabindex="0"></i>
+                            {{ items.text }}
                         </li>
                     </ul>
                 </div>
@@ -45,19 +52,70 @@
         <div class="card">
             <div class="card_body">
                 <h4 class="mb-4 font-weight-600 text-color">Dropdown with Image</h4>
-                <div class="custom_dropdown" (click)="dropdownShow2()" [ngClass]="{'open':dropShow2}">
+                <div class="custom_dropdown" (click)="dropdownShow2()" [ngClass]="{ open: dropShow2 }">
                     <input type="search" placeholder="Dropdown item" readonly="readonly" class="custom_input"
                         id="searchfield" [value]="selectedValue2" />
                     <ul class="select_dropdown">
-                        <li *ngFor="let items of dropdown2 " class="option" (click)="show2(items.text)">
-                            <img src="{{items.path}}" alt="" srcset="">
-                            {{items.text}}
+                        <li *ngFor="let items of dropdown2; let first = first" class="option"
+                            (click)="show2(items.text)">
+                            <img src="{{ items.path }}" alt="" srcset="" />
+                            {{ items.text }}
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    
-
+    <div class="xl-4 column">
+        <div class="card">
+            <div class="card_body">
+                <h4 class="mb-4 font-weight-600 text-color">
+                    Dropdown with Internal Search
+                </h4>
+                <p class="extraText mb-1" [ngClass]="{ ellipse: readmore }">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                    porro nesciunt neque ab adipisci ipsa dicta laboriosam distinctio quod
+                    sit ratione corporis minima aperiam atque, mollitia consequatur?
+                    Excepturi dolor odio delectus iure voluptatibus illum deserunt
+                    perferendis, saepe quisquam officiis ea blanditiis repudiandae a
+                    praesentium at quia quibusdam maiores adipisci cupiditate suscipit
+                    officia dolorem. Expedita ut perspiciatis impedit distinctio aliquid
+                    laboriosam quibusdam, dolorum perferendis ex et sint minus nulla quos
+                    laudantium neque ratione voluptas? Odio ratione id voluptates in aut
+                    repellendus error alias. Laborum maiores nisi ipsam rerum quibusdam
+                    magnam odit itaque repellendus. Perferendis magni eius ipsa aut,
+                    itaque impedit! Aspernatur! Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Pariatur porro nesciunt neque ab adipisci ipsa dicta
+                    laboriosam distinctio quod sit ratione corporis minima aperiam atque,
+                    mollitia consequatur? Excepturi dolor odio delectus iure voluptatibus
+                    illum deserunt perferendis, saepe quisquam officiis ea blanditiis
+                    repudiandae a praesentium at quia quibusdam maiores adipisci
+                    cupiditate suscipit officia dolorem. Expedita ut perspiciatis impedit
+                    distinctio aliquid laboriosam quibusdam, dolorum perferendis ex et
+                    sint minus nulla quos laudantium neque ratione voluptas? Odio ratione
+                    id voluptates in aut repellendus error alias. Laborum maiores nisi
+                    ipsam rerum quibusdam magnam odit itaque repellendus. Perferendis
+                    magni eius ipsa aut, itaque impedit! Aspernatur!
+                </p>
+                <a class="readmore mb-3" href="javascript:void(0)" (click)="readMore()">{{ readmore ? "Read More" :
+                    "Read
+                    Less" }}</a>
+                <div class="custom_dropdown" (mouseenter)="dropdownShow3()" (mouseleave)="dropShow3=false"
+                    [ngClass]="{ open: dropShow3 }">
+                    <input type="search" placeholder="Dropdown item" readonly="readonly" class="custom_input"
+                        id="searchfield1" [value]="selectedValue3" />
+                    <ul class="select_dropdown" [ngClass]="{ dropUp: upClass }">
+                       <li class="option is_search">
+                        <input type="search" name="is_search" id="is_search" class="custom_input" placeholder="Search here" style="box-shadow: none; background-color:#f2f2f2"/>
+                       </li>
+                     
+                        <li *ngFor="let city of dropdown3; let first = first" class="option" (click)="show3(city.name)">
+                       <b>{{city.code}}-</b>     {{ city.name }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<script></script>
